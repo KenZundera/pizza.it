@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #1b3377;
+}
+
+body::-webkit-scrollbar-track {
+  background: #212529;
+}
+
+#nav-target {
+  transition: top 0.3s;
+}
+
+.maju {
+  z-index: 2000 !important;
+}
+
+section {
+  padding: 6rem 0rem;
+  position: relative;
+}
+
+.relative {
+  position: relative;
+}
+
+.loader {
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  text-align: center;
+  opacity: 0.7;
+  background-color: #212529;
+  z-index: 99;
+}
+
+.loader__inner {
+  position: absolute;
+  top: 250px;
+  left: 570px;
+  z-index: 100;
+  animation: spin 2s linear infinite;
+  -webkit-animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.form-control {
+  color: black !important;
+}
+
+.form-select {
+  color: black !important;
+}
+
+.carousel-caption h1 {
+  filter: drop-shadow(1px 1px 20px rgba(0, 0, 0, 0.5));
+  -webkit-filter: drop-shadow(1px 1px 20px rgba(0, 0, 0, 0.5));
+}
+
+.carousel-caption p {
+  filter: drop-shadow(1px 1px 20px rgba(255, 255, 255, 0.5));
+  -webkit-filter: drop-shadow(1px 1px 20px rgba(255, 255, 255, 0.5));
+}
+
+@media screen and (max-width: 768px) {
+  img {
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .gambar {
+    text-align: center;
+    margin-top: 2rem;
+  }
+}

@@ -1,0 +1,44 @@
+
+function sendMsg(){
+
+  let name = document.getElementById("nama").value;
+  let email = document.getElementById("email").value;
+  let nomor = document.getElementById("nomor").value;
+  let address = document.getElementById("address").value;
+  let jenis1 = document.getElementById("jenis1").value;
+  let jumlah1 = document.getElementById("jumlah1").value;
+  let jenis2 = document.getElementById("jenis2").value;
+  let jumlah2 = document.getElementById("jumlah2").value;
+  
+  if(jumlah1 != 0 && jumlah2 == 0) {
+    let msg = "Halo, Pizza.It. Saya ingin memesan pizza dengan rincian sebagai berikut: %0A%0ANama: " + name + "%0ANomor: " + nomor + "%0AEmail: " + email + "%0AAlamat: " + address + "%0AJenis: %0A" + jenis1 + " x" + jumlah1 + "%0A%0ATerima kasih telah memesan di Pizza.It.";
+    const win = window.open(`https://wa.me/6282180023577?text=${msg}`, '_blank');
+  } else if(jumlah2 != 0 && jumlah1 == 0) {
+    let msg = "Halo, Pizza.It. Saya ingin memesan pizza dengan rincian sebagai berikut: %0A%0ANama: " + name + "%0ANomor: " + nomor + "%0AEmail: " + email + "%0AAlamat: " + address + "%0AJenis: %0A" + jenis2 + " x" + jumlah2 + "%0A%0ATerima kasih telah memesan di Pizza.It.";
+    const win = window.open(`https://wa.me/6282180023577?text=${msg}`, '_blank');
+  }else if (jumlah1 != 0 && jumlah2 != 0) {
+    let msg = "Halo, Pizza.It. Saya ingin memesan dua pizza dengan rincian sebagai berikut: %0A%0ANama: " + name + "%0ANomor: " + nomor + "%0AEmail: " + email + "%0AAlamat: " + address + "%0AJenis: %0A" + jenis1 + " x" + jumlah1 + "%0A" + jenis2 + " x" + jumlah2 + "%0A%0ATerima kasih telah memesan di Pizza.It.";
+    const win = window.open(`https://wa.me/6282180023577?text=${msg}`, '_blank');
+  }
+ // win.focus();
+}
+
+// Modal
+const myModal = document.getElementById('myModal')
+const myInput = document.getElementById('myInput')
+
+myModal.addEventListener('shown.bs.modal', () => {
+  myInput.focus()
+})
+
+// Navbar
+const prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  const currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("nav-target").style.top = "0";
+  } else {
+    document.getElementById("nav-target").style.top = "-5rem";
+  }
+  prevScrollpos = currentScrollPos;
+}
