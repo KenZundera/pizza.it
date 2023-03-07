@@ -1,5 +1,4 @@
-
-function sendMsg(){
+function orderPizza(){
 
   let name = document.getElementById("nama").value;
   let email = document.getElementById("email").value;
@@ -23,22 +22,30 @@ function sendMsg(){
  // win.focus();
 }
 
-// Modal
-const myModal = document.getElementById('myModal')
-const myInput = document.getElementById('myInput')
+ // Modal
+ const myModal = document.getElementById('myModal')
+ const myInput = document.getElementById('myInput')
 
-myModal.addEventListener('shown.bs.modal', () => {
-  myInput.focus()
-})
+ myModal.addEventListener('shown.bs.modal', () => {
+   myInput.focus()
+ })
 
-// Navbar
-const prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
-  const currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    document.getElementById("nav-target").style.top = "0";
-  } else {
-    document.getElementById("nav-target").style.top = "-5rem";
-  }
-  prevScrollpos = currentScrollPos;
-}
+ function sendContactMsg() {
+   let name = document.getElementById('name').value
+   let email = document.getElementById('email').value
+   let msg = document.getElementById('message').value
+
+   let pesan =
+     'Halo, Pizza.It. %0A%0ANama saya ' +
+     name +
+     '. %0AEmail saya ' +
+     email +
+     '. %0APesan saya adalah: ' +
+     msg +
+     '. %0A%0ATerima kasih telah menghubungi Pizza.It.'
+   const win = window.open(
+     `https://wa.me/6285757536205?text=${pesan}`,
+     '_blank',
+   )
+   // win.focus();
+ }
