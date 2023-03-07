@@ -11,13 +11,13 @@ function orderPizza(){
   
   if(jumlah1 != 0 && jumlah2 == 0) {
     let msg = "Halo, Pizza.It. Saya ingin memesan pizza dengan rincian sebagai berikut: %0A%0ANama: " + name + "%0ANomor: " + nomor + "%0AEmail: " + email + "%0AAlamat: " + address + "%0AJenis: %0A" + jenis1 + " x" + jumlah1 + "%0A%0ATerima kasih telah memesan di Pizza.It.";
-    const win = window.open(`https://wa.me/6282180023577?text=${msg}`, '_blank');
+    const win = window.open(`https://wa.me/6285757536205?text=${msg}`, '_blank');
   } else if(jumlah2 != 0 && jumlah1 == 0) {
     let msg = "Halo, Pizza.It. Saya ingin memesan pizza dengan rincian sebagai berikut: %0A%0ANama: " + name + "%0ANomor: " + nomor + "%0AEmail: " + email + "%0AAlamat: " + address + "%0AJenis: %0A" + jenis2 + " x" + jumlah2 + "%0A%0ATerima kasih telah memesan di Pizza.It.";
-    const win = window.open(`https://wa.me/6282180023577?text=${msg}`, '_blank');
+    const win = window.open(`https://wa.me/6285757536205?text=${msg}`, '_blank');
   }else if (jumlah1 != 0 && jumlah2 != 0) {
     let msg = "Halo, Pizza.It. Saya ingin memesan dua pizza dengan rincian sebagai berikut: %0A%0ANama: " + name + "%0ANomor: " + nomor + "%0AEmail: " + email + "%0AAlamat: " + address + "%0AJenis: %0A" + jenis1 + " x" + jumlah1 + "%0A" + jenis2 + " x" + jumlah2 + "%0A%0ATerima kasih telah memesan di Pizza.It.";
-    const win = window.open(`https://wa.me/6282180023577?text=${msg}`, '_blank');
+    const win = window.open(`https://wa.me/6285757536205?text=${msg}`, '_blank');
   }
  // win.focus();
 }
